@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <meta name="description" content="Daniel — simple USDC payments on Ethereum.">
+  <title>Daniel — USDC Payments</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="brand">
+      <div class="mark">D</div>
+      <div><div class="brand-name">Daniel</div><div class="brand-sub">PERSONAL PAYMENTS</div></div>
+    </header>
+
+    <section class="panel">
+      <div class="eyebrow">PAYMENT CHECKOUT</div>
+      <h1>Send a payment</h1>
+      <p class="intro">Enter an amount to prepare your USDC payment on the Ethereum network.</p>
+
+      <label for="amount">Payment amount <span>(USD)</span></label>
+      <div class="amount-wrap"><span>$</span><input id="amount" type="number" min="2" step="0.01" placeholder="0.00" inputmode="decimal"></div>
+      <div class="presets" aria-label="Suggested amounts">
+        <button type="button" data-amount="10">$10</button>
+        <button type="button" data-amount="25">$25</button>
+        <button type="button" data-amount="50">$50</button>
+        <button type="button" data-amount="100">$100</button>
+      </div>
+
+      <div class="method">
+        <div class="coin">₮</div>
+        <div class="method-copy"><strong>USD Coin (USDC)</strong><small>Ethereum · ERC-20</small></div>
+        <span class="selected">SELECTED</span>
+      </div>
+
+      <button class="continue" id="continue" type="button">Prepare payment <span>→</span></button>
+      <p class="notice" id="notice" role="status">Payment processing is not connected yet. Do not send funds to this preview.</p>
+      <div class="secure"><span>●</span> Network: Ethereum Mainnet <span class="dot">·</span> Asset: USDC</div>
+    </section>
+
+    <footer>Payments are only complete after blockchain confirmation.<br>© <span id="year"></span> Daniel</footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
